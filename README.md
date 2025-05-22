@@ -20,13 +20,26 @@ Creating good architecture documentation is challenging. These prompts help you:
 | [Architecture Communication Canvas](Architecture-Communication-Canvas.md) | Creates a visual canvas summarizing key architecture aspects in one page | AsciiDoc with HTML table |
 | [Architecture Decision Record](Architecture-Decision-Record.md) | Structured approach to documenting architecture decisions with Pugh Matrix evaluation | AsciiDoc document |
 
+### Comprehensive Documentation Tools
+
+| Prompt | Description | Output Format |
+|--------|-------------|---------------|
+| [arc42 Chapter Generator](arc42-Chapter-Generator.md) | Step-by-step creation of complete arc42 documentation with quality-driven approach | Multiple AsciiDoc files |
+| [Quality Scenarios Builder](Quality-Scenarios-Builder.md) | Create testable, specific quality requirements using structured scenarios | AsciiDoc quality scenarios |
+
+### Risk and Debt Management
+
+| Prompt | Description | Output Format |
+|--------|-------------|---------------|
+| [Risk Assessment Matrix](Risk-Assessment-Matrix.md) | Systematic identification and assessment of architecture risks with mitigation strategies | AsciiDoc risk register |
+| [Technical Debt Tracker](Technical-Debt-Tracker.md) | Comprehensive technical debt identification, prioritization, and management | AsciiDoc debt register |
+
 ### Specialized Prompts (Coming Soon)
 
-- **arc42 Chapter Generator** - Step-by-step creation of arc42 documentation
-- **Quality Scenarios Builder** - Create testable quality requirements
-- **Risk Assessment Matrix** - Systematic risk identification and mitigation
-- **Technical Debt Tracker** - Document and prioritize technical debt
-- **Stakeholder Analysis** - Identify and analyze project stakeholders
+- **Stakeholder Analysis** - Identify and analyze project stakeholders systematically
+- **Context Diagram Generator** - Create system context diagrams with stakeholder mapping
+- **Solution Strategy Planner** - Develop comprehensive solution strategies based on quality goals
+- **Deployment View Creator** - Design and document system deployment architectures
 
 ## 🚀 How to Use These Prompts
 
@@ -71,6 +84,20 @@ The ADR prompt guides you through a structured decision-making process:
 3. **Decision Rationale**: Clear justification based on evaluation
 4. **Consequences**: Both positive effects and risks
 
+### Quality Scenarios Example
+
+The Quality Scenarios Builder helps create testable requirements:
+
+```
+Scenario: Normal User Response Time
+Quality Attribute: Performance
+Context: Normal business operation with up to 500 concurrent users
+Stimulus: User submits a search query
+Response: System returns search results
+Response Measure: 95% of queries return results within 200ms
+Priority: High
+```
+
 ## 🛠 Integration Tips
 
 ### With docToolchain
@@ -90,6 +117,11 @@ The generated AsciiDoc can be published directly to Confluence using docToolchai
 - Store prompts as documentation templates in your repository
 - Version control the generated architecture documents
 - Use in CI/CD for automated documentation generation
+
+### With Project Management
+- Link architecture decisions to requirements
+- Track technical debt in your issue tracking system
+- Use risk assessments for project planning
 
 ## 🎨 Customization
 
@@ -123,6 +155,39 @@ Architecture Decision Records (ADRs) use:
 - Consequence documentation
 - Traceability of architectural reasoning
 
+### Quality-Driven Architecture
+Quality Scenarios provide:
+- Testable quality requirements
+- Objective success criteria
+- Architecture decision guidance
+- Validation frameworks
+
+### Risk-Driven Development
+Risk Assessment includes:
+- Systematic risk identification
+- Impact and probability evaluation
+- Mitigation strategy development
+- Continuous risk monitoring
+
+## 🔄 Workflow Integration
+
+### Recommended Usage Sequence
+
+1. **Start with Architecture Communication Canvas** - Get the big picture
+2. **Use arc42 Chapter Generator** - Create comprehensive documentation
+3. **Build Quality Scenarios** - Define testable requirements
+4. **Create Architecture Decision Records** - Document key decisions
+5. **Assess Risks** - Identify and mitigate project risks
+6. **Track Technical Debt** - Manage long-term code health
+
+### Continuous Documentation
+
+These prompts support:
+- **Living Documentation**: Keep docs updated as code evolves
+- **Iterative Refinement**: Improve documentation over multiple iterations
+- **Team Collaboration**: Involve multiple stakeholders in documentation creation
+- **Knowledge Transfer**: Maintain institutional knowledge
+
 ## 🤝 Contributing
 
 We welcome contributions! Please:
@@ -131,6 +196,27 @@ We welcome contributions! Please:
 2. **Follow Structure**: Use similar format to existing prompts
 3. **Add Examples**: Include sample outputs
 4. **Document Usage**: Explain when and how to use the prompt
+5. **Consider Integration**: How does your prompt work with others?
+
+### Contribution Ideas
+- Domain-specific prompts (e.g., microservices, data architecture)
+- Integration with specific tools (Jira, GitHub, etc.)
+- Visualization enhancements
+- Multilingual versions
+
+## 📊 Metrics and Success
+
+### Documentation Quality Metrics
+- Completeness of architecture coverage
+- Stakeholder understanding and feedback
+- Decision traceability
+- Risk mitigation effectiveness
+
+### Process Improvement Metrics
+- Time to create documentation
+- Documentation maintenance effort
+- Team adoption rate
+- Knowledge transfer effectiveness
 
 ## 📄 License
 
@@ -143,6 +229,7 @@ These prompts are available under Creative Commons Attribution-ShareAlike 4.0 In
 - [Architecture Communication Canvas by Gernot Starke](https://canvas.arc42.org)
 - [PlantUML](https://plantuml.com) for diagrams
 - [Kroki](https://kroki.io) for diagram generation
+- [ADR GitHub Organization](https://adr.github.io/) for decision records
 
 ---
 
