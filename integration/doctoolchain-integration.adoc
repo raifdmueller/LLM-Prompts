@@ -1,0 +1,8 @@
+=== With docToolchain
+
+[source,bash]
+----
+# Add generated AsciiDoc files to your docToolchain project
+./dtcw generateHTML
+./dtcw generatePDF
+----
