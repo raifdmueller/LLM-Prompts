@@ -1,0 +1,372 @@
+= Consolidated LLM System Prompts for Architecture Documentation
+:toc: left
+:toclevels: 3
+:sectanchors:
+:sectlinks:
+:sectnums:
+:icons: font
+
+This document provides consolidated system prompts for creating specialized AI assistants focused on software architecture documentation using arc42, docToolchain, and related methodologies.
+
+== Overview
+
+These prompts transform LLMs into expert architecture assistants that can:
+
+* Structure architecture thinking systematically  
+* Generate consistent, high-quality documentation
+* Follow established methodologies like arc42
+* Create visual diagrams and decision records
+* Maintain documentation as living artifacts
+
+All prompts generate **AsciiDoc output** compatible with **docToolchain** workflows and include **PlantUML/C4 diagrams** for visual documentation.
+
+== Complete Architecture Assistant (All Capabilities)
+
+This mega-prompt combines all architecture documentation capabilities into a single comprehensive system prompt.
+
+[source, markdown]
+----
+include::Architecture-Communication-Canvas.md[]
+
+---
+
+include::Architecture-Decision-Record.md[]
+
+---
+
+include::arc42-Chapter-Generator.md[]
+
+---
+
+include::Quality-Scenarios-Builder.md[]
+
+---
+
+include::Risk-Assessment-Matrix.md[]
+
+---
+
+include::Technical-Debt-Tracker.md[]
+
+---
+
+include::Stakeholder-Analysis.md[]
+
+---
+
+include::Context-Diagram-Generator.md[]
+
+---
+
+include::Solution-Strategy-Planner.md[]
+
+---
+
+include::Deployment-View-Creator.md[]
+----
+
+== Core Architecture Tools Only
+
+Essential tools for basic architecture documentation needs.
+
+[source, markdown]
+----
+include::Architecture-Communication-Canvas.md[]
+
+---
+
+include::Architecture-Decision-Record.md[]
+
+---
+
+include::Quality-Scenarios-Builder.md[]
+----
+
+== Comprehensive Documentation Suite
+
+Full arc42 documentation capabilities with risk and debt management.
+
+[source, markdown]
+----
+include::arc42-Chapter-Generator.md[]
+
+---
+
+include::Quality-Scenarios-Builder.md[]
+
+---
+
+include::Risk-Assessment-Matrix.md[]
+
+---
+
+include::Technical-Debt-Tracker.md[]
+----
+
+== Specialized Architecture Prompts
+
+Advanced prompts for specific architecture concerns following arc42 chapters.
+
+[source, markdown]
+----
+include::Stakeholder-Analysis.md[]
+
+---
+
+include::Context-Diagram-Generator.md[]
+
+---
+
+include::Solution-Strategy-Planner.md[]
+
+---
+
+include::Deployment-View-Creator.md[]
+----
+
+== Quick Start Combinations
+
+=== Architecture Overview Assistant
+For high-level architecture communication and stakeholder alignment.
+
+[source, markdown]
+----
+include::Architecture-Communication-Canvas.md[]
+
+---
+
+include::Stakeholder-Analysis.md[]
+
+---
+
+include::Context-Diagram-Generator.md[]
+----
+
+=== Strategic Planning Assistant  
+For solution strategy and architectural decision making.
+
+[source, markdown]
+----
+include::Quality-Scenarios-Builder.md[]
+
+---
+
+include::Solution-Strategy-Planner.md[]
+
+---
+
+include::Architecture-Decision-Record.md[]
+----
+
+=== Operational Architecture Assistant
+For deployment and operational concerns.
+
+[source, markdown]
+----
+include::Deployment-View-Creator.md[]
+
+---
+
+include::Risk-Assessment-Matrix.md[]
+
+---
+
+include::Technical-Debt-Tracker.md[]
+----
+
+== Individual Prompts
+
+=== Architecture Communication Canvas
+High-level architecture overview and stakeholder communication.
+
+[source, markdown]
+----
+include::Architecture-Communication-Canvas.md[]
+----
+
+=== Architecture Decision Record
+Structured architectural decision documentation with Pugh Matrix evaluation.
+
+[source, markdown]
+----
+include::Architecture-Decision-Record.md[]
+----
+
+=== arc42 Chapter Generator
+Complete arc42 documentation creation with quality-driven approach.
+
+[source, markdown]
+----
+include::arc42-Chapter-Generator.md[]
+----
+
+=== Quality Scenarios Builder
+Testable quality requirements using structured scenarios.
+
+[source, markdown]
+----
+include::Quality-Scenarios-Builder.md[]
+----
+
+=== Risk Assessment Matrix
+Systematic architecture risk identification and mitigation.
+
+[source, markdown]
+----
+include::Risk-Assessment-Matrix.md[]
+----
+
+=== Technical Debt Tracker
+Comprehensive technical debt identification and management.
+
+[source, markdown]
+----
+include::Technical-Debt-Tracker.md[]
+----
+
+=== Stakeholder Analysis
+Systematic stakeholder identification and communication planning.
+
+[source, markdown]
+----
+include::Stakeholder-Analysis.md[]
+----
+
+=== Context Diagram Generator
+System context diagrams following C4 Model Level 1 principles.
+
+[source, markdown]
+----
+include::Context-Diagram-Generator.md[]
+----
+
+=== Solution Strategy Planner
+Quality-driven solution strategies following arc42 Chapter 4.
+
+[source, markdown]
+----
+include::Solution-Strategy-Planner.md[]
+----
+
+=== Deployment View Creator
+Comprehensive deployment architectures following arc42 Chapter 7.
+
+[source, markdown]
+----
+include::Deployment-View-Creator.md[]
+----
+
+== Usage Instructions
+
+=== For LLM Platforms
+
+1. **Copy the desired prompt combination** from the source blocks above
+2. **Paste into your LLM interface** as a system prompt or initial message
+3. **Begin your architecture work** - the AI will guide you through structured processes
+
+=== For AI Assistant Creation
+
+1. **Select the appropriate combination** based on your needs:
+   - **Complete Architecture Assistant**: All capabilities
+   - **Core Tools**: Essential functionality only  
+   - **Specialized**: Advanced arc42-specific tools
+   - **Quick Start**: Focused combinations for specific workflows
+
+2. **Use as system prompts** in platforms like:
+   - Claude Projects (Anthropic)
+   - GPTs (OpenAI)
+   - Custom AI assistants
+   - API implementations
+
+=== Integration with docToolchain
+
+All generated outputs are designed to work seamlessly with docToolchain:
+
+```bash
+# Process generated AsciiDoc files
+./dtcw generateHTML
+./dtcw generatePDF
+./dtcw publishToConfluence
+```
+
+== Prompt Characteristics
+
+=== Consistent Style Elements
+
+All prompts in this collection share:
+
+* **Structured approach**: Step-by-step guided processes
+* **Quality focus**: Decisions tied to measurable quality goals  
+* **Visual integration**: PlantUML/C4 diagrams embedded
+* **arc42 alignment**: Direct support for arc42 methodology
+* **AsciiDoc output**: Compatible with docToolchain workflows
+* **Comprehensive templates**: Ready-to-use documentation structures
+
+=== Interaction Patterns
+
+* **Question-driven**: Prompts ask targeted questions to gather requirements
+* **Iterative refinement**: Support for multiple rounds of improvement
+* **Decision traceability**: Clear rationale for all architectural choices
+* **Stakeholder focus**: Consider multiple perspectives and communication needs
+* **Implementation guidance**: Actionable next steps and validation approaches
+
+=== Integration Benefits
+
+When used together, these prompts provide:
+
+* **End-to-end coverage**: From high-level strategy to operational implementation
+* **Consistent terminology**: Shared vocabulary across all documentation
+* **Traceability**: Clear links between different architectural concerns
+* **Workflow continuity**: Outputs from one prompt feed naturally into others
+* **Quality coherence**: Unified approach to quality-driven architecture
+
+== Examples and Templates
+
+=== Creating a Complete Architecture Documentation Set
+
+1. **Start with Architecture Communication Canvas** - Get the big picture
+2. **Use Stakeholder Analysis** - Understand who needs what
+3. **Create Context Diagrams** - Establish system boundaries
+4. **Build Quality Scenarios** - Define measurable requirements  
+5. **Develop Solution Strategy** - Bridge requirements to decisions
+6. **Document Architecture Decisions** - Capture key choices
+7. **Plan Deployment** - Address operational concerns
+8. **Assess Risks** - Identify and mitigate threats
+9. **Track Technical Debt** - Manage long-term code health
+
+=== Typical Workflow Integration
+
+```
+Stakeholder Analysis → Context Diagrams → Quality Scenarios 
+         ↓
+Solution Strategy → Architecture Decisions → Deployment View
+         ↓  
+Risk Assessment → Technical Debt Tracking → Documentation
+```
+
+=== Output Integration
+
+All prompts generate documentation that can be combined into comprehensive arc42 documentation:
+
+* **Chapter 1**: Introduction and Goals (Architecture Communication Canvas)
+* **Chapter 3**: System Scope and Context (Context Diagram Generator)  
+* **Chapter 4**: Solution Strategy (Solution Strategy Planner)
+* **Chapter 7**: Deployment View (Deployment View Creator)
+* **Chapter 9**: Architecture Decisions (Architecture Decision Record)
+* **Chapter 10**: Quality Requirements (Quality Scenarios Builder)
+* **Chapter 11**: Risk and Technical Debt (Risk Assessment, Technical Debt Tracker)
+
+== Contributing
+
+To maintain consistency across all prompts:
+
+1. **Follow the established style patterns** shown in existing prompts
+2. **Use consistent terminology** (AsciiDoc, arc42, PlantUML, etc.)
+3. **Maintain structured approaches** with clear step-by-step processes
+4. **Include visual elements** using PlantUML/C4 notation
+5. **Ensure quality focus** in all architectural decisions
+6. **Test integration** with other prompts in the collection
+
+---
+
+*These consolidated prompts provide a comprehensive toolkit for AI-assisted architecture documentation following arc42 methodology and docToolchain workflows.*
