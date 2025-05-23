@@ -8,7 +8,7 @@
 
 A collection of carefully crafted prompts to help with software architecture documentation using arc42, docToolchain, and related methodologies. These prompts are designed to work with various LLMs (Claude, ChatGPT, etc.) to streamline architecture documentation workflows.
 
-== 🏯 What's This About?
+== 🎯 What's This About?
 
 Creating good architecture documentation is challenging. These prompts help you:
 
@@ -141,7 +141,7 @@ These prompts are designed to be customizable:
 . **Add Custom Sections**: Include organization-specific requirements
 . **Integrate Tools**: Connect with your existing toolchain
 
-== 🔬 Background & Methodology
+== 📚 Background & Methodology
 
 === arc42 Template
 These prompts follow the https://arc42.org[arc42 template] structure, which provides:
