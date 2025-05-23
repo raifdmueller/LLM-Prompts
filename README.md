@@ -66,14 +66,14 @@ These prompts are designed to work seamlessly with [docToolchain](https://doctoo
 When you use the Architecture Communication Canvas prompt, you'll get an interactive session like this:
 
 ```
-🔗 Let's create your Architecture Communication Canvas! 
+🔖 Let's create your Architecture Communication Canvas! 
 
 First, let's understand the value proposition of your system.
 What are the system's major objectives? What value does it deliver to customers?
 
 👤 We're building an e-commerce platform that enables small businesses to sell online...
 
-🔗 Great! Now let's identify your key stakeholders.
+🔖 Great! Now let's identify your key stakeholders.
 Who are your most important customers and contributors?
 ```
 
