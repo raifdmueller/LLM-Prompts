@@ -2,7 +2,7 @@
 
 A collection of carefully crafted prompts to help with software architecture documentation using arc42, docToolchain, and related methodologies. These prompts are designed to work with various LLMs (Claude, ChatGPT, etc.) to streamline architecture documentation workflows.
 
-## 🎯 What's This About?
+## 🏯 What's This About?
 
 Creating good architecture documentation is challenging. These prompts help you:
 - Structure your architecture thinking systematically
@@ -34,12 +34,14 @@ Creating good architecture documentation is challenging. These prompts help you:
 | [Risk Assessment Matrix](Risk-Assessment-Matrix.md) | Systematic identification and assessment of architecture risks with mitigation strategies | AsciiDoc risk register |
 | [Technical Debt Tracker](Technical-Debt-Tracker.md) | Comprehensive technical debt identification, prioritization, and management | AsciiDoc debt register |
 
-### Specialized Prompts (Coming Soon)
+### Specialized Prompts
 
-- **Stakeholder Analysis** - Identify and analyze project stakeholders systematically
-- **Context Diagram Generator** - Create system context diagrams with stakeholder mapping
-- **Solution Strategy Planner** - Develop comprehensive solution strategies based on quality goals
-- **Deployment View Creator** - Design and document system deployment architectures
+| Prompt | Description | Output Format |
+|--------|-------------|---------------|
+| [Stakeholder Analysis](Stakeholder-Analysis.md) | Systematically identify and analyze project stakeholders with communication planning | AsciiDoc stakeholder register |
+| [Context Diagram Generator](Context-Diagram-Generator.md) | Create comprehensive system context diagrams following C4 Model Level 1 principles | AsciiDoc with C4-PlantUML diagrams |
+| [Solution Strategy Planner](Solution-Strategy-Planner.md) | Develop comprehensive solution strategies based on quality goals following arc42 Chapter 4 principles | AsciiDoc strategy document |
+| [Deployment View Creator](Deployment-View-Creator.md) | Design and document comprehensive system deployment architectures following arc42 Chapter 7 principles | AsciiDoc deployment documentation |
 
 ## 🚀 How to Use These Prompts
 
@@ -62,14 +64,14 @@ These prompts are designed to work seamlessly with [docToolchain](https://doctoo
 When you use the Architecture Communication Canvas prompt, you'll get an interactive session like this:
 
 ```
-🤖 Let's create your Architecture Communication Canvas! 
+🔗 Let's create your Architecture Communication Canvas! 
 
 First, let's understand the value proposition of your system.
 What are the system's major objectives? What value does it deliver to customers?
 
 👤 We're building an e-commerce platform that enables small businesses to sell online...
 
-🤖 Great! Now let's identify your key stakeholders.
+🔗 Great! Now let's identify your key stakeholders.
 Who are your most important customers and contributors?
 ```
 
@@ -98,7 +100,7 @@ Response Measure: 95% of queries return results within 200ms
 Priority: High
 ```
 
-## 🛠 Integration Tips
+## 🔗 Integration Tips
 
 ### With docToolchain
 ```bash
@@ -132,7 +134,7 @@ These prompts are designed to be customizable:
 3. **Add Custom Sections**: Include organization-specific requirements
 4. **Integrate Tools**: Connect with your existing toolchain
 
-## 📚 Background & Methodology
+## 🔬 Background & Methodology
 
 ### arc42 Template
 These prompts follow the [arc42 template](https://arc42.org) structure, which provides:
