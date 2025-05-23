@@ -82,11 +82,11 @@ Creating good architecture documentation is challenging. These prompts help you:
 | link:Solution-Strategy-Planner.md[Solution Strategy Planner]
 | Develop comprehensive solution strategies based on quality goals following arc42 Chapter 4 principles
 | AsciiDoc strategy document
+
+| link:Deployment-View-Creator.md[Deployment View Creator]
+| Design and document comprehensive system deployment architectures following arc42 Chapter 7 principles
+| AsciiDoc deployment documentation
 |===
-
-**Coming Soon:**
-
-* **Deployment View Creator** - Design and document system deployment architectures
 
 == 🚀 How to Use These Prompts
 
