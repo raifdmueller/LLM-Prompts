@@ -39,9 +39,9 @@ Creating good architecture documentation is challenging. These prompts help you:
 | Prompt | Description | Output Format |
 |--------|-------------|---------------|
 | [Stakeholder Analysis](Stakeholder-Analysis.md) | Systematically identify and analyze project stakeholders with communication planning | AsciiDoc stakeholder register |
+| [Context Diagram Generator](Context-Diagram-Generator.md) | Create comprehensive system context diagrams following C4 Model Level 1 principles | AsciiDoc with C4-PlantUML diagrams |
 
 **Coming Soon:**
-- **Context Diagram Generator** - Create system context diagrams with stakeholder mapping
 - **Solution Strategy Planner** - Develop comprehensive solution strategies based on quality goals
 - **Deployment View Creator** - Design and document system deployment architectures
 
