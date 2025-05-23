@@ -2,7 +2,7 @@
 
 A collection of carefully crafted prompts to help with software architecture documentation using arc42, docToolchain, and related methodologies. These prompts are designed to work with various LLMs (Claude, ChatGPT, etc.) to streamline architecture documentation workflows.
 
-## 🎯 What's This About?
+## 🏯 What's This About?
 
 Creating good architecture documentation is challenging. These prompts help you:
 - Structure your architecture thinking systematically
@@ -66,14 +66,14 @@ These prompts are designed to work seamlessly with [docToolchain](https://doctoo
 When you use the Architecture Communication Canvas prompt, you'll get an interactive session like this:
 
 ```
-🔖 Let's create your Architecture Communication Canvas! 
+🔗 Let's create your Architecture Communication Canvas! 
 
 First, let's understand the value proposition of your system.
 What are the system's major objectives? What value does it deliver to customers?
 
 👤 We're building an e-commerce platform that enables small businesses to sell online...
 
-🔖 Great! Now let's identify your key stakeholders.
+🔗 Great! Now let's identify your key stakeholders.
 Who are your most important customers and contributors?
 ```
 
@@ -136,7 +136,7 @@ These prompts are designed to be customizable:
 3. **Add Custom Sections**: Include organization-specific requirements
 4. **Integrate Tools**: Connect with your existing toolchain
 
-## 📚 Background & Methodology
+## 🔬 Background & Methodology
 
 ### arc42 Template
 These prompts follow the [arc42 template](https://arc42.org) structure, which provides:
