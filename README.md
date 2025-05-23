@@ -2,7 +2,7 @@
 
 A collection of carefully crafted prompts to help with software architecture documentation using arc42, docToolchain, and related methodologies. These prompts are designed to work with various LLMs (Claude, ChatGPT, etc.) to streamline architecture documentation workflows.
 
-## 🎯 What's This About?
+## 🏯 What's This About?
 
 Creating good architecture documentation is challenging. These prompts help you:
 - Structure your architecture thinking systematically
@@ -40,9 +40,9 @@ Creating good architecture documentation is challenging. These prompts help you:
 |--------|-------------|---------------|
 | [Stakeholder Analysis](Stakeholder-Analysis.md) | Systematically identify and analyze project stakeholders with communication planning | AsciiDoc stakeholder register |
 | [Context Diagram Generator](Context-Diagram-Generator.md) | Create comprehensive system context diagrams following C4 Model Level 1 principles | AsciiDoc with C4-PlantUML diagrams |
+| [Solution Strategy Planner](Solution-Strategy-Planner.md) | Develop comprehensive solution strategies based on quality goals following arc42 Chapter 4 principles | AsciiDoc strategy document |
 
 **Coming Soon:**
-- **Solution Strategy Planner** - Develop comprehensive solution strategies based on quality goals
 - **Deployment View Creator** - Design and document system deployment architectures
 
 ## 🚀 How to Use These Prompts
@@ -136,7 +136,7 @@ These prompts are designed to be customizable:
 3. **Add Custom Sections**: Include organization-specific requirements
 4. **Integrate Tools**: Connect with your existing toolchain
 
-## 📚 Background & Methodology
+## 🔬 Background & Methodology
 
 ### arc42 Template
 These prompts follow the [arc42 template](https://arc42.org) structure, which provides:

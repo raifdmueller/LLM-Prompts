@@ -78,17 +78,14 @@ Creating good architecture documentation is challenging. These prompts help you:
 | link:Context-Diagram-Generator.md[Context Diagram Generator]
 | include::descriptions/Context-Diagram-Generator-Description.adoc[tag=purpose]
 | AsciiDoc with C4-PlantUML diagrams
+
+| link:Solution-Strategy-Planner.md[Solution Strategy Planner]
+| Develop comprehensive solution strategies based on quality goals following arc42 Chapter 4 principles
+| AsciiDoc strategy document
 |===
-
-==== Stakeholder Analysis
-include::descriptions/Stakeholder-Analysis-Description.adoc[tag=detailed]
-
-==== Context Diagram Generator
-include::descriptions/Context-Diagram-Generator-Description.adoc[tag=detailed]
 
 **Coming Soon:**
 
-* **Solution Strategy Planner** - Develop comprehensive solution strategies based on quality goals
 * **Deployment View Creator** - Design and document system deployment architectures
 
 == 🚀 How to Use These Prompts
