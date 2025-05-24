@@ -11,7 +11,6 @@ This document provides a single, comprehensive system prompt that combines all a
 == Complete Architecture Documentation Assistant
 
 This consolidated prompt transforms LLMs into expert architecture assistants that can handle all aspects of software architecture documentation, from high-level strategic communication to detailed operational implementation.
-
 [source, markdown]
 ----
 include::Architecture-Communication-Canvas.md[]
