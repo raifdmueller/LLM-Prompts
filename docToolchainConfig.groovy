@@ -32,6 +32,39 @@ asciidoctorConfigFile = [
     'imagesdir': 'images'
 ]
 
+// Site generation configuration for generateSite
+site = [
+    // Site-specific configuration for better documentation website
+    name: 'LLM Prompts for Software Architecture',
+    description: 'A comprehensive collection of LLM prompts for software architecture documentation',
+    baseUrl: 'https://raifdmueller.github.io/LLM-Prompts/',
+    author: 'docToolchain Community',
+    
+    // Theme and styling
+    theme: 'default',
+    
+    // Navigation and structure
+    navigation: [
+        [title: 'Home', url: '/'],
+        [title: 'Prompts', url: '/prompts/'],
+        [title: 'About', url: '/about/']
+    ]
+]
+
+// Microsite configuration (used by generateSite)
+microsite = [
+    // Enable microsite generation
+    enabled: true,
+    
+    // Microsite-specific settings
+    siteName: 'LLM Architecture Prompts',
+    siteDescription: 'Professional LLM prompts for software architecture documentation',
+    baseUrl: 'https://raifdmueller.github.io/LLM-Prompts/',
+    
+    // Output directory for microsite
+    outputDir: 'build/microsite'
+]
+
 confluence = [
     // Confluence configuration (if needed later)
     // baseUrl: 'https://yourcompany.atlassian.net',
@@ -45,7 +78,7 @@ githubPages = [
     // Enable for GitHub Pages deployment
     enabled: true,
     branch: 'gh-pages',
-    folder: 'build/docs/html5'
+    folder: 'build/microsite'
 ]
 
 // PDF configuration
@@ -54,9 +87,8 @@ pdfTheme = 'basic'
 // Task dependencies and settings
 taskGroups = [
     'doctoolchain': [
-        'generateHTML',
-        'generatePDF',
-        'generateSite'
+        'generateSite',
+        'generatePDF'
     ]
 ]
 
