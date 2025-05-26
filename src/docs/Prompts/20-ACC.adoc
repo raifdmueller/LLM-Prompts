@@ -1,0 +1,10 @@
+:jbake-title: AC Canvas
+
+== Architecture Communication Canvas
+
+ifndef::projectRootDir[:projectRootDir: ../../..]
+
+[source, markdown]
+----
+include::{projectRootDir}/prompts/Architecture-Communication-Canvas.md[]
+----

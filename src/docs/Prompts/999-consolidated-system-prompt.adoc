@@ -1,4 +1,4 @@
-= Consolidated System Prompt for Architecture Documentation
+== Consolidated System Prompt for Architecture Documentation
 :toc: left
 :toclevels: 2
 :sectanchors:
@@ -6,61 +6,64 @@
 :sectnums:
 :icons: font
 
+ifndef::projectRootDir[:projectRootDir: ../../..]
+
 This document provides a single, comprehensive system prompt that combines all architecture documentation capabilities into one mega-prompt for creating specialized AI assistants focused on software architecture documentation using arc42, docToolchain, and related methodologies.
 
-== Complete Architecture Documentation Assistant
+=== Complete Architecture Documentation Assistant
 
 This consolidated prompt transforms LLMs into expert architecture assistants that can handle all aspects of software architecture documentation, from high-level strategic communication to detailed operational implementation.
+
 [source, markdown]
 ----
-include::Architecture-Communication-Canvas.md[]
+include::{projectRootDir}/prompts/Architecture-Communication-Canvas.md[]
 
 ---
 
-include::Architecture-Decision-Record.md[]
+include::{projectRootDir}/prompts/arc42-Chapter-Generator.md[]
 
 ---
 
-include::arc42-Chapter-Generator.md[]
+include::{projectRootDir}/prompts/Context-Diagram-Generator.md[]
 
 ---
 
-include::Quality-Scenarios-Builder.md[]
+include::{projectRootDir}/prompts/Solution-Strategy-Planner.md[]
 
 ---
 
-include::Risk-Assessment-Matrix.md[]
+include::{projectRootDir}/prompts/Architecture-Decision-Record.md[]
 
 ---
 
-include::Technical-Debt-Tracker.md[]
+include::{projectRootDir}/prompts/Quality-Scenarios-Builder.md[]
 
 ---
 
-include::Stakeholder-Analysis.md[]
+include::{projectRootDir}/prompts/Risk-Assessment-Matrix.md[]
 
 ---
 
-include::Context-Diagram-Generator.md[]
+include::{projectRootDir}/prompts/Technical-Debt-Tracker.md[]
 
 ---
 
-include::Solution-Strategy-Planner.md[]
+include::{projectRootDir}/prompts/Stakeholder-Analysis.md[]
 
 ---
 
-include::Deployment-View-Creator.md[]
+include::{projectRootDir}/prompts/Deployment-View-Creator.md[]
 ----
 
-== Usage Instructions
+=== Usage Instructions
 
-=== For LLM Platforms
+==== For LLM Platforms
 
 1. **Copy the complete prompt** from the source block above
 2. **Paste into your LLM interface** as a system prompt or initial message
 3. **Begin your architecture work** - the AI will guide you through structured processes for any architecture documentation need
 
-=== For AI Assistant Creation
+==== For AI Assistant Creation
 
 1. **Use as system prompt** in platforms like:
    - Claude Projects (Anthropic)
@@ -80,7 +83,7 @@ include::Deployment-View-Creator.md[]
    - Solution strategy development
    - Deployment architecture design
 
-=== Integration with docToolchain
+==== Integration with docToolchain
 
 All generated outputs are designed to work seamlessly with docToolchain:
 
@@ -91,7 +94,7 @@ All generated outputs are designed to work seamlessly with docToolchain:
 ./dtcw publishToConfluence
 ```
 
-== Capabilities Overview
+=== Capabilities Overview
 
 The consolidated assistant provides:
 
@@ -104,7 +107,7 @@ The consolidated assistant provides:
 * **Decision traceability**: Clear rationale linking requirements to architectural choices
 * **Implementation guidance**: Actionable next steps and validation approaches
 
-== Workflow Integration
+=== Workflow Integration
 
 The assistant supports complete architecture documentation workflows:
 
