@@ -1,3 +1,86 @@
+== Technical Debt Tracker Prompt
+
+=== Purpose
+
+Technical debt refers to the implied cost of additional rework caused by choosing an easy (limited) solution now instead of using a better approach that would take longer. This prompt helps systematically identify, assess, prioritize, and manage technical debt in software projects.
+
+=== Prompt Template
+
+[source,text]
+----
+Help me create a comprehensive technical debt tracking system for my project. We'll work through this systematically to identify, categorize, prioritize, and plan remediation for technical debt items.
+
+# Step 1: Debt Identification
+First, let's identify different types of technical debt in your system:
+
+**Code Debt**:
+- Duplicated code
+- Complex, hard-to-understand code
+- Code without tests
+- Poorly named variables/functions
+- Long methods/classes
+- Dead code
+
+**Architecture Debt**:
+- Violations of architectural principles
+- Missing or inadequate design patterns
+- Tight coupling between modules
+- Missing abstractions
+- Inconsistent data models
+
+**Design Debt**:
+- User interface inconsistencies
+- Poor user experience patterns
+- Accessibility issues
+- Missing design system compliance
+
+**Documentation Debt**:
+- Missing or outdated documentation
+- Undocumented APIs
+- Missing architecture decisions
+- Outdated deployment guides
+
+**Test Debt**:
+- Missing unit tests
+- Inadequate integration tests
+- No automated testing
+- Poor test coverage
+- Flaky tests
+
+**Infrastructure Debt**:
+- Outdated dependencies
+- Missing monitoring
+- Manual deployment processes
+- Security vulnerabilities
+- Performance bottlenecks
+
+# Step 2: Debt Assessment
+For each identified debt item, we'll assess:
+
+**Impact Analysis**:
+- **Development Velocity**: How much does this slow down new development?
+- **Maintenance Cost**: How much effort is spent working around this issue?
+- **Quality Risk**: What's the risk of bugs or system failures?
+- **Business Impact**: How does this affect business operations or customer experience?
+
+**Effort Estimation**:
+- **Time Required**: How long would it take to fix properly?
+- **Complexity**: How complex is the fix (Low/Medium/High/Very High)?
+- **Skills Needed**: What expertise is required?
+- **Dependencies**: What other work must be completed first?
+
+# Step 3: Prioritization Framework
+We'll use a scoring system to prioritize debt items:
+
+**Priority Score = Impact Score + (6 - Effort Score) + Risk Score + Business Value Score**
+
+Each component scored 1-5:
+- **Impact Score**: 1=Low impact, 5=High impact on development/operations
+- **Effort Score**: 1=Very High effort, 5=Low effort (inverted so low effort = high score)
+- **Risk Score**: 1=Low risk, 5=High risk if not addressed
+- **Business Value Score**: 1=Low business value, 5=High business value to fix
+
+**High Priority (Immediate Action)**:
 - High impact on development velocity
 - High risk if not addressed
 - Relatively low effort to resolve
