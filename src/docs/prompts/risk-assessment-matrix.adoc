@@ -1,0 +1,303 @@
+== Risk Assessment Matrix Prompt
+
+=== Purpose
+
+Risk assessment is crucial for successful software architecture projects. This prompt helps systematically identify, analyze, and plan mitigation strategies for technical, business, and operational risks that could impact your project.
+
+=== Prompt Template
+
+[source,text]
+----
+Help me create a comprehensive risk assessment matrix for my software architecture project. We'll systematically identify risks, assess their impact and probability, and develop mitigation strategies.
+
+# Step 1: Project Context
+First, tell me about your project context:
+- Project scope and timeline
+- Technology stack and constraints
+- Team experience and size
+- Business criticality
+- Regulatory requirements
+- Integration complexity
+
+# Step 2: Risk Categories
+Let's identify risks across different categories:
+
+**Technical Risks**:
+- Technology choices (unproven, obsolete, complex)
+- Performance and scalability concerns
+- Security vulnerabilities
+- Integration challenges
+- Data migration issues
+- Technical debt accumulation
+
+**Business Risks**:
+- Changing requirements
+- Budget constraints
+- Market competition
+- Regulatory changes
+- Stakeholder conflicts
+- Business model evolution
+
+**Operational Risks**:
+- Team capacity and skills
+- Third-party dependencies
+- Infrastructure limitations
+- Deployment complexities
+- Maintenance challenges
+- Knowledge transfer issues
+
+**External Risks**:
+- Vendor lock-in
+- Supply chain disruptions
+- Economic factors
+- Natural disasters
+- Cyber security threats
+- Legal/compliance issues
+
+# Step 3: Risk Assessment Framework
+For each risk, we'll assess:
+
+**Probability Scale (1-5)**:
+1. Very Low (0-10% chance)
+2. Low (10-30% chance)
+3. Medium (30-50% chance)
+4. High (50-80% chance)
+5. Very High (80-100% chance)
+
+**Impact Scale (1-5)**:
+1. Minimal (minor delays, minimal cost)
+2. Low (< 1 month delay, < 10% cost increase)
+3. Medium (1-3 months delay, 10-25% cost increase)
+4. High (3-6 months delay, 25-50% cost increase)
+5. Critical (> 6 months delay, > 50% cost increase, project failure)
+
+**Risk Score = Probability × Impact**
+
+**Risk Levels**:
+- Low Risk: Score 1-6 (Monitor)
+- Medium Risk: Score 8-12 (Plan mitigation)
+- High Risk: Score 15-20 (Immediate action)
+- Critical Risk: Score 25 (Emergency response)
+
+# Step 4: Mitigation Strategies
+For each risk, we'll define:
+
+**Prevention**: Actions to reduce probability
+**Mitigation**: Actions to reduce impact if risk occurs
+**Contingency**: Backup plans if mitigation fails
+**Transfer**: Insurance, contracts, outsourcing
+**Acceptance**: Acknowledge and monitor
+
+# Step 5: Documentation Format
+Generate the risk assessment in this AsciiDoc format:
+
+```
+== Risk Assessment Matrix
+
+=== Risk Summary Dashboard
+[cols="1,3,1,1,1,1,2"]
+|===
+|Risk ID |Risk Description |Probability |Impact |Score |Level |Status
+
+|RISK-001
+|Database technology becomes obsolete
+|2
+|4
+|8
+|Medium
+|Mitigation planned
+
+|RISK-002
+|Key developer leaves project
+|3
+|4
+|12
+|Medium
+|Prevention active
+
+|RISK-003
+|Performance requirements not met
+|3
+|5
+|15
+|High
+|Active mitigation
+|===
+
+=== Detailed Risk Analysis
+
+==== RISK-001: Database Technology Obsolescence
+**Category**: Technical +
+**Status**: Identified +
+**Risk Level**: Medium (Score: 8) +
+
+**Description**: 
+The chosen database technology may become obsolete or lose vendor support during the project lifecycle, requiring costly migration and redevelopment.
+
+**Probability Assessment**: Low (2/5)
+- Technology has strong vendor backing
+- Large community and ecosystem
+- Recent major version releases
+
+**Impact Assessment**: High (4/5)
+- Would require complete data migration
+- Significant code changes needed
+- Potential service interruption
+- Estimated 3-4 months additional development
+
+**Mitigation Strategy**:
+*Prevention*:
+- Choose database with strong long-term support
+- Implement database abstraction layer
+- Regular technology roadmap reviews
+
+*Mitigation*:
+- Design for database portability
+- Maintain migration scripts
+- Regular backup and export procedures
+
+*Contingency*:
+- Alternative database evaluation completed
+- Migration timeline and cost estimates prepared
+- Vendor escalation contacts established
+
+**Action Items**:
+- [ ] Implement database abstraction layer (Due: [Date])
+- [ ] Create database migration playbook (Due: [Date])
+- [ ] Quarterly vendor roadmap review (Recurring)
+
+**Review History**:
+- [Date]: Risk identified during architecture review
+- [Date]: Mitigation strategy approved
+- [Date]: Database abstraction layer implemented
+
+==== RISK-002: Key Personnel Departure
+**Category**: Operational +
+**Status**: Active monitoring +
+**Risk Level**: Medium (Score: 12) +
+
+**Description**:
+Critical team members with unique knowledge or skills leave the project, causing knowledge loss and delivery delays.
+
+**Probability Assessment**: Medium (3/5)
+- Competitive job market
+- High-demand skills
+- Project duration > 18 months
+
+**Impact Assessment**: High (4/5)
+- Knowledge transfer time required
+- Temporary productivity loss
+- Potential quality issues
+- Recruitment and training costs
+
+**Mitigation Strategy**:
+*Prevention*:
+- Knowledge sharing sessions
+- Comprehensive documentation
+- Cross-training initiatives
+- Competitive retention packages
+
+*Mitigation*:
+- Rapid knowledge transfer protocols
+- External consultant relationships
+- Overlapping skill development
+
+*Contingency*:
+- Pre-qualified contractor pool
+- Emergency knowledge extraction procedures
+- Project scope reduction options
+
+**Action Items**:
+- [ ] Monthly knowledge sharing sessions (Recurring)
+- [ ] Document critical architectural decisions (Ongoing)
+- [ ] Cross-train team members on core components (Due: [Date])
+
+==== RISK-003: Performance Requirements Not Met
+**Category**: Technical +
+**Status**: Active mitigation +
+**Risk Level**: High (Score: 15) +
+
+**Description**:
+System fails to meet performance requirements under expected load, resulting in user dissatisfaction and potential business impact.
+
+**Probability Assessment**: Medium (3/5)
+- Complex system with multiple integrations
+- Aggressive performance targets
+- Limited performance testing to date
+
+**Impact Assessment**: Critical (5/5)
+- Direct customer impact
+- Potential SLA violations
+- Revenue loss
+- Major redesign may be required
+
+**Mitigation Strategy**:
+*Prevention*:
+- Early performance testing
+- Performance-driven architecture design
+- Regular load testing
+- Performance monitoring implementation
+
+*Mitigation*:
+- Performance optimization toolkit
+- Caching strategies implementation
+- Database optimization procedures
+- Infrastructure scaling capabilities
+
+*Contingency*:
+- Performance consultant engagement
+- Architecture redesign options
+- Phased performance improvement plan
+
+**Action Items**:
+- [x] Implement performance monitoring (Completed: [Date])
+- [ ] Conduct load testing with 2x expected volume (Due: [Date])
+- [ ] Optimize database queries (In Progress)
+- [ ] Implement caching layer (Due: [Date])
+```
+
+# Step 6: Risk Monitoring and Review
+Establish regular risk review processes:
+
+**Weekly**: High and critical risk status updates
+**Monthly**: Complete risk register review
+**Quarterly**: Risk landscape reassessment
+**Major milestones**: Risk impact on timeline and scope
+
+# Step 7: Risk Communication
+Create communication strategies for:
+- Stakeholder risk reporting
+- Team risk awareness
+- Escalation procedures
+- Risk status dashboards
+
+Let's start by discussing your project context and identifying the most significant risk categories for your system.
+----
+
+=== Usage Instructions
+
+1. **Regular Reviews**: Assess risks continuously throughout the project
+2. **Team Involvement**: Include diverse perspectives in risk identification
+3. **Actionable Plans**: Ensure mitigation strategies are specific and measurable
+4. **Monitor Trends**: Track how risks evolve over time
+5. **Learn from Experience**: Update risk assessments based on lessons learned
+
+=== Expected Output
+
+The prompt generates:
+
+* Comprehensive risk register
+* Prioritized risk matrix
+* Detailed mitigation strategies
+* Action plans with ownership
+* Regular review schedules
+
+=== Integration with Architecture Documentation
+
+Risk assessment should:
+
+* Inform architecture decisions (ADRs)
+* Connect to quality scenarios
+* Guide technology choices
+* Support project planning
+* Influence design strategies
