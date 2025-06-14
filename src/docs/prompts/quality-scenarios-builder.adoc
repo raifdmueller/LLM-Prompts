@@ -1,0 +1,205 @@
+== Quality Scenarios Builder Prompt
+
+=== Purpose
+
+Quality scenarios provide a structured way to specify quality requirements that are testable, measurable, and directly linked to business goals. This prompt helps create comprehensive quality scenarios following the established arc42 methodology.
+
+=== Prompt Template
+
+[source,text]
+----
+Help me create comprehensive quality scenarios for my software project. We'll work through each quality attribute systematically to create testable, specific scenarios that guide architecture decisions.
+
+# Step 1: Project Context
+First, tell me about your project:
+- What type of system are you building?
+- Who are the primary users?
+- What is the business context?
+- What are the critical business goals?
+
+# Step 2: Quality Attribute Selection
+Let's identify the most important quality attributes for your system. Rate each from 1-5 (5=critical):
+
+**Performance**: Response times, throughput, resource usage
+**Reliability**: Availability, fault tolerance, recoverability
+**Security**: Authentication, authorization, data protection
+**Usability**: User experience, learnability, accessibility
+**Scalability**: Load handling, growth capacity
+**Maintainability**: Code quality, modifiability, testability
+**Portability**: Platform independence, deployment flexibility
+**Interoperability**: Integration with other systems
+**Safety**: Risk mitigation, fail-safe behavior
+**Compliance**: Regulatory requirements, standards adherence
+
+# Step 3: Scenario Structure
+For each important quality attribute, we'll create scenarios using this structure:
+
+**Quality Scenario Template**:
+- **Scenario ID**: Unique identifier
+- **Quality Attribute**: The primary quality concern
+- **Scenario Title**: Descriptive name
+- **Context**: The conditions under which the scenario occurs
+- **Stimulus**: The event or condition that triggers the scenario
+- **Response**: The expected system behavior
+- **Response Measure**: Quantifiable criteria for success
+- **Priority**: High/Medium/Low
+- **Rationale**: Why this scenario is important
+- **Acceptance Criteria**: How to verify the scenario is met
+
+# Step 4: Scenario Categories
+We'll create scenarios for different operational conditions:
+
+**Normal Operation**: Expected day-to-day usage
+**Peak Load**: Maximum expected system stress
+**Failure Conditions**: How the system handles problems
+**Maintenance**: Behavior during updates and maintenance
+**Security Threats**: Response to security incidents
+**Growth Scenarios**: System behavior as usage scales
+
+# Step 5: Documentation Format
+Generate quality scenarios in this AsciiDoc format:
+
+```
+== Quality Scenarios
+
+=== Quality Goals Summary
+[cols="2,1,1,4"]
+|===
+|Quality Attribute |Priority |Target |Description
+
+|Performance
+|High
+|< 200ms
+|All user interactions complete within 200ms under normal load
+
+|Reliability
+|High
+|99.9%
+|System availability excluding planned maintenance
+
+|Security
+|Critical
+|Zero breaches
+|No unauthorized access to sensitive data
+|===
+
+=== Detailed Quality Scenarios
+
+==== Performance Scenarios
+
+===== QS-PERF-001: Normal User Response Time
+**Quality Attribute**: Performance +
+**Priority**: High +
+**Context**: Normal business operation with up to 500 concurrent users +
+**Stimulus**: User submits a search query +
+**Response**: System returns search results +
+**Response Measure**: 95% of queries return results within 200ms +
+**Rationale**: Users expect immediate feedback for search operations +
+**Acceptance Criteria**: 
+- Load testing shows 95th percentile response time < 200ms
+- No degradation with up to 500 concurrent users
+- Database query optimization implemented
+
+===== QS-PERF-002: Peak Load Handling
+**Quality Attribute**: Performance +
+**Priority**: High +
+**Context**: Black Friday sales event with 5x normal traffic +
+**Stimulus**: Traffic spike to 2500 concurrent users +
+**Response**: System maintains functionality with graceful degradation +
+**Response Measure**: 90% of operations complete within 1 second +
+**Rationale**: Business cannot afford downtime during peak sales +
+**Acceptance Criteria**:
+- Auto-scaling activates within 2 minutes
+- Core functionality remains available
+- Revenue-generating features prioritized
+
+==== Reliability Scenarios
+
+===== QS-REL-001: Database Failover
+**Quality Attribute**: Reliability +
+**Priority**: High +
+**Context**: Normal operation with database cluster +
+**Stimulus**: Primary database server fails +
+**Response**: System automatically fails over to secondary database +
+**Response Measure**: Service restoration within 30 seconds, no data loss +
+**Rationale**: Database is single point of failure for entire system +
+**Acceptance Criteria**:
+- Automated failover process
+- Health monitoring detects failure within 10 seconds
+- All transactions in progress are preserved
+
+==== Security Scenarios
+
+===== QS-SEC-001: Unauthorized Access Attempt
+**Quality Attribute**: Security +
+**Priority**: Critical +
+**Context**: Public-facing web application +
+**Stimulus**: Multiple failed login attempts from single IP +
+**Response**: System blocks IP and alerts security team +
+**Response Measure**: Account lockout after 3 failed attempts, IP block after 10 attempts +
+**Rationale**: Prevent brute force attacks on user accounts +
+**Acceptance Criteria**:
+- Rate limiting implemented
+- Security alerts triggered
+- Legitimate users can unlock accounts
+
+==== Usability Scenarios
+
+===== QS-USA-001: New User Onboarding
+**Quality Attribute**: Usability +
+**Priority**: Medium +
+**Context**: New user accessing application for first time +
+**Stimulus**: User completes registration process +
+**Response**: System guides user through key features +
+**Response Measure**: 80% of new users complete onboarding tutorial +
+**Rationale**: Reduce time to value for new users +
+**Acceptance Criteria**:
+- Interactive tutorial available
+- Progress tracking implemented
+- Skip option provided for experienced users
+```
+
+# Step 6: Scenario Validation
+For each scenario, we'll verify:
+- **Testability**: Can this be measured and tested?
+- **Relevance**: Does this align with business goals?
+- **Specificity**: Are the measures concrete and quantifiable?
+- **Achievability**: Is this technically and economically feasible?
+
+# Step 7: Architecture Impact Analysis
+We'll analyze how these scenarios influence:
+- **Technology Choices**: What technologies support these requirements?
+- **Architecture Patterns**: What patterns help achieve these qualities?
+- **Design Decisions**: How do these scenarios guide design choices?
+- **Trade-offs**: What conflicts exist between scenarios?
+
+Let's start by discussing your project context and identifying your most critical quality attributes.
+----
+
+=== Usage Instructions
+
+1. **Start with Business Goals**: Connect quality scenarios to business objectives
+2. **Be Specific**: Use quantifiable measures wherever possible
+3. **Consider Trade-offs**: Acknowledge conflicts between quality attributes
+4. **Involve Stakeholders**: Include business users in scenario creation
+5. **Keep Current**: Update scenarios as system and business evolve
+
+=== Expected Output
+
+The prompt generates:
+
+* Comprehensive quality scenarios document
+* Prioritized quality goals matrix
+* Testable acceptance criteria
+* Architecture guidance
+* AsciiDoc formatted documentation
+
+=== Integration with Architecture Documentation
+
+Quality scenarios should:
+
+* Drive architecture decision records (ADRs)
+* Inform solution strategy (Chapter 4)
+* Guide technology selection
+* Support testing strategy
+* Connect to risk assessment
